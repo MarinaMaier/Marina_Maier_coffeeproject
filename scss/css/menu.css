@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 300;
+  display: inline;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.063rem;
+  font-weight: 300;
+  text-decoration: none;
+  color: #393939;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.nav-bar__heading {
+  display: flex;
+  align-items: center;
+}
+.nav-bar__heading h2 a {
+  text-decoration: none;
+  color: #393939;
+}
+.nav-bar__list {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+}
+.nav-bar__list ul {
+  display: flex;
+  flex-direction: row;
+  gap: 41px;
+  text-decoration: none;
+  margin: 0;
+}
+.nav-bar__list ul li .about {
+  color: #393939;
+  text-decoration: none;
+}
+.nav-bar__list ul li .menu {
+  color: #393939;
+  text-decoration: none;
+}
+.nav-bar__list ul li .shop-now {
+  color: #5bacc3;
+  text-decoration: none;
+}
+
+header {
+  background-color: #fff0ed;
+}
+
+.components {
+  height: 700px;
+}
+.components__coffee-img {
+  width: 100vw;
+  height: 110vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.components__coffee-img__title-box {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3.75rem;
+  font-weight: 300;
+  width: 28%;
+  height: 12.5rem;
+  background-color: #393939;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  bottom: 540px;
+}
+.components__coffee-img__title-box--heading {
+  position: relative;
+  top: -9px;
+  right: 9px;
+  border: 5px solid #5bacc3;
+  padding: 54px;
+}
+
+.sub-navigation {
+  background-color: #393939;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0;
+}
+.sub-navigation li a {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.313rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.sub-navigation ul li {
+  display: inline-block;
+  margin: 0.6rem 0;
+  padding: 0 0.6rem;
+  border-left: 0.2rem #5bacc3 solid;
+}
+
+.hot-drinks {
+  background-color: #fff;
+  padding: 15px 30%;
+  text-align: center;
+  background-color: #fff0ed;
+}
+
+.cold-drinks {
+  background-color: #fff;
+  padding: 15px 30%;
+  text-align: center;
+}
+
+.pastries {
+  background-color: #fff;
+  padding: 15px 30%;
+  text-align: center;
+  background-color: #fff0ed;
+}
+
+.menu {
+  margin-top: 10px;
+}
+.menu .menu__description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.menu__price {
+  color: #5bacc3;
+  font-weight: 400;
+} /*# sourceMappingURL=menu.css.map */

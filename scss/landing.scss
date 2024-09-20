@@ -1,0 +1,307 @@
+@use "./partials/global" as *;
+
+@mixin button {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+body {
+  background-color: #f7f7f7;
+  width: 100%;
+}
+
+header {
+  background-color: $nitro-pink;
+  width: 100%;
+}
+
+// Container Nitro Cooffee
+
+.container {
+  background-color: $nitro-pink;
+  display: $layout-flex;
+  justify-content: space-evenly;
+  &__content {
+    display: $layout-flex;
+    flex-direction: column;
+    width: 38%;
+    text-align: left;
+  }
+
+  &__image {
+    display: $layout-inline;
+    margin-bottom: 40px;
+  }
+}
+
+//Products Section
+
+.products__section {
+  text-align: $main-text-align;
+  padding-bottom: 10px;
+  .products__container {
+    display: $layout-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .products {
+      width: 330px;
+      height: 440px;
+      background-color: $white;
+      box-sizing: content-box;
+      border-radius: 10px;
+      text-align: $main-text-align;
+      margin: 40px;
+      box-shadow: 0 5px 9px -1px $box-shadow;
+      .products-img {
+        position: relative;
+        top: 30px;
+        height: 280px;
+      }
+
+      .items--container {
+        background-color: $nitro-pink;
+        border-radius: 0 0 10px 10px;
+        display: $layout-flex;
+        justify-content: space-around;
+        position: relative;
+        top: 42px;
+        .products__items--conteiner {
+          display: $layout-flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .products__items--heading {
+          margin: 0;
+          font-size: $navl-button-size;
+        }
+        .products__items--item {
+          margin: 0;
+          text-align: start;
+          font-weight: 300;
+          font-size: $nav-font-size;
+          opacity: 50%;
+        }
+      }
+      .products__items--price-container {
+        align-self: center;
+        .products__items--price {
+          font-size: 2.125rem;
+          font-weight: 700;
+          font-family: $main-font;
+          color: $nitro-blue;
+        }
+      }
+    }
+  }
+}
+
+// Buttons
+
+button {
+  font-family: $main-font;
+  font-size: $navl-button-size;
+  font-weight: $secondary-font-weight;
+  color: $white;
+}
+
+.button--hover {
+  background: $nitro-blue;
+  border: 5px solid black;
+  padding: 1.5rem 3rem;
+  cursor: pointer;
+  box-shadow: 10px 10px $nitro-blue, inset 5px 5px white;
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    // background: $nitro-blue;
+  }
+  &::before {
+    top: 100%;
+    left: 5px;
+    height: 10px;
+    width: 5px;
+  }
+  &::after {
+    left: 100%;
+    top: 5px;
+    height: 5px;
+    width: 10px;
+  }
+}
+
+.button--hover:focus {
+  background-color: $nitro-blue;
+}
+
+.button--hover:active {
+  background-color: $nitro-blue;
+  box-shadow: 0 5px $graphite;
+  transform: translateY(10px);
+}
+
+// Main Review
+
+.main-review {
+  display: $layout-flex;
+  justify-content: center;
+  background-color: $white;
+  padding-top: 85px;
+
+  &__review {
+    display: $layout-flex;
+    flex-direction: column;
+    max-width: 42%;
+    padding-left: 50px;
+
+    &__heading {
+      display: $layout-flex;
+    }
+
+    &__text {
+      display: $layout-flex;
+    }
+
+    &__icons {
+      display: $layout-flex;
+      justify-content: space-between;
+      padding-bottom: 20px;
+    }
+
+    &__button {
+      display: $layout-flex;
+    }
+  }
+}
+
+.article {
+  display: $layout-flex;
+  &__background {
+    position: relative;
+    left: 85px;
+    width: 330px;
+    height: 330px;
+    outline: 4px solid $nitro-blue;
+    outline-offset: -17px;
+    border: 5px solid transparent;
+    border-width: 24px 5px 5px 25px;
+  }
+  &__can {
+    height: 300px;
+    position: relative;
+    right: 167px;
+    top: 30px;
+
+    transition: transform 0.7s ease-in-out;
+  }
+
+  &__can:hover {
+    transform: rotate(360deg);
+  }
+}
+
+// Banner
+
+.banner__section {
+  background-color: $white;
+  height: 400px;
+  box-sizing: content-box;
+  display: $layout-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: $main-text-align;
+}
+
+.banner {
+  background-color: $graphite;
+  width: 75%;
+  color: $white;
+  font-size: $discount-size;
+  font-weight: 400;
+  padding: 17px;
+  animation: test 2.5s infinite;
+}
+
+@keyframes test {
+  0% {
+    background-color: $graphite;
+  }
+  50% {
+    background-color: $nitro-blue;
+  }
+  100% {
+    background-color: $graphite;
+  }
+}
+
+// Footer
+
+.content {
+  background-color: $nitro-pink;
+  display: $layout-flex;
+  justify-content: space-around;
+  padding: 20px 0;
+
+  &__watermark__l {
+    width: 80px;
+    opacity: 20%;
+    position: relative;
+    right: 50px;
+  }
+
+  .content__box {
+    display: $layout-flex;
+    &__address {
+      display: $layout-flex;
+      flex-direction: column;
+      h3 {
+        margin: 30px 0 10px 0;
+      }
+      &__size {
+        margin: 0;
+        font-size: $nav-font-size;
+      }
+    }
+    &__hours {
+      display: $layout-flex;
+      flex-direction: column;
+      h3 {
+        margin: 30px 0 10px 0;
+      }
+      &__size {
+        margin: 0;
+        font-size: $nav-font-size;
+      }
+    }
+
+    &__social {
+      display: $layout-flex;
+      flex-direction: column;
+      h3 {
+        margin: 30px 0 0 0;
+      }
+      .social__icons {
+        display: $layout-flex;
+      }
+    }
+  }
+
+  &__watermark__r {
+    width: 80px;
+    opacity: 20%;
+    position: relative;
+    top: 70px;
+    left: 48px;
+  }
+}
+
+.icons {
+  width: 50px;
+}
+
+.bold {
+  font-weight: bold;
+}

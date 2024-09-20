@@ -1,0 +1,101 @@
+@use "./partials/global" as *;
+
+@mixin menu-items {
+  background-color: $white;
+  padding: 15px 30%;
+  text-align: $main-text-align;
+}
+
+header {
+  background-color: $nitro-pink;
+}
+
+.components {
+  height: 700px;
+
+  &__coffee-img {
+    width: 100vw;
+    height: 110vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &__title-box {
+      @include default-font;
+      width: 28%;
+      height: 12.5rem;
+      background-color: $graphite;
+      color: $white;
+      text-align: $main-text-align;
+      margin: 0 auto;
+      position: relative;
+      bottom: 540px;
+
+      &--heading {
+        position: relative;
+        top: -9px;
+        right: 9px;
+        border: 5px solid $nitro-blue;
+        padding: 54px;
+      }
+    }
+  }
+}
+
+.sub-navigation {
+  background-color: $graphite;
+  text-align: $main-text-align;
+  padding: 0.5rem;
+  margin: 0;
+  li {
+    a {
+      color: $white;
+      font-family: $main-font;
+      font-size: $navl-button-size;
+      font-weight: $main-font-weight;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+}
+
+.sub-navigation {
+  ul {
+    li {
+      display: $layout-inline-block;
+      margin: 0.6rem 0;
+      padding: 0 0.6rem;
+      border-left: 0.2rem $nitro-blue solid;
+    }
+  }
+}
+
+.hot-drinks {
+  @include menu-items;
+  background-color: $nitro-pink;
+}
+
+.cold-drinks {
+  @include menu-items;
+}
+
+.pastries {
+  @include menu-items;
+  background-color: $nitro-pink;
+}
+
+.menu {
+  margin-top: 10px;
+
+  .menu__description {
+    font-family: $main-font;
+    font-size: $paragraph-size;
+    font-weight: $secondary-font-weight;
+    font-style: italic;
+  }
+
+  &__price {
+    color: $nitro-blue;
+    font-weight: $secondary-font-weight;
+  }
+}

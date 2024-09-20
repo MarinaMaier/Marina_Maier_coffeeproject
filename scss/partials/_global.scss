@@ -1,0 +1,130 @@
+$main-font: 'Open Sans', sans-serif;
+$h1-size: 3.75rem;
+$main-font-weight: 300;
+$h3-navh-fh: 2.063rem;
+$navl-button-size: 1.313rem;
+$paragraph-size: 1.125rem;
+$secondary-font-weight: 400;
+$discount-size: 2.813rem;
+$graphite:  #393939;
+$nitro-blue: #5BACC3;
+$nitro-pink: #FFF0ED;
+$light-gray: #F7F7F7;
+$white: #FFF;
+$box-shadow: #00000040;
+$nav-font-size: 1rem;
+$main-text-align: center;
+$margin-default: 0;
+$layout-inline: inline;
+$layout-inline-block: inline-block;
+$layout-flex: flex;
+$text-decor: none;
+$padding-default: 20px;
+$default-box-sizing: content-box;
+
+@mixin default-font {
+    font-family: $main-font;
+    font-size: $h1-size;
+    font-weight: $main-font-weight;
+}
+
+@mixin paragraph {
+    font-family: $main-font;
+    font-size: $paragraph-size;
+    font-weight: $main-font-weight;
+}
+
+@mixin layout {
+    display: $layout-inline-block;
+    padding: $padding-default;
+}
+
+@mixin text-align {
+    text-align: $main-text-align;
+    padding: $padding-default;
+}
+
+@mixin nav-bar-list {
+    font-family: $main-font;
+    font-size: $nav-font-size;
+    font-weight: $secondary-font-weight;
+}
+
+body {
+    margin: $margin-default;
+}
+
+h1 {
+    @include default-font;
+    display: $layout-inline;
+} 
+
+h2 {
+    @include default-font;
+    margin: $margin-default;
+  }
+  
+h3 {
+    font-family: $main-font;
+    font-size: $h3-navh-fh;
+    font-weight: $main-font-weight;
+    text-decoration: $text-decor;
+    color: $graphite;
+}
+
+p {
+    @include paragraph;
+}
+
+ul {
+    list-style-type: none;
+    margin: $margin-default;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        h2 {
+            a {
+                text-decoration: none; 
+                color: $graphite;
+            }
+        }
+    }
+
+    &__list {
+        @include nav-bar-list();
+        display: flex; 
+        ul {
+            display: flex;
+            flex-direction: row;
+            gap: 41px;
+            text-decoration: none;
+            margin: 0;
+                li {
+                    .about {
+                        color: $graphite;
+                        text-decoration: none;
+                    }
+
+                    .menu {
+                        color: $graphite;
+                        text-decoration: none;
+                    }
+
+                    .shop-now {
+                        color: $nitro-blue;
+                        text-decoration: none;
+                    }
+                }
+           
+        }
+        
+    }
+}
